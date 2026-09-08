@@ -1,0 +1,41 @@
+### Listar empleados
+GET http://localhost:8080/api/empleados
+
+### Buscar empleado
+GET http://localhost:8080/api/empleados/1
+
+### Registrar empleado valido
+POST http://localhost:8080/api/empleados
+Content-Type: application/json; charset=utf-8
+
+{
+  "nombres": "Ana María",
+  "apellidos": "López Pérez",
+  "cargo": "Analista de sistemas",
+  "salario": 18500.00
+}
+
+### Actualizar empleado
+PUT http://localhost:8080/api/empleados/1
+Content-Type: application/json; charset=utf-8
+
+{
+  "nombres": "Ana María",
+  "apellidos": "López Pérez",
+  "cargo": "Coordinadora de sistemas",
+  "salario": 20500.00
+}
+
+### Eliminar empleado
+DELETE http://localhost:8080/api/empleados/1
+
+### Probar validacion 400
+POST http://localhost:8080/api/empleados
+Content-Type: application/json; charset=utf-8
+
+{
+  "nombres": "",
+  "apellidos": "Pérez",
+  "cargo": "",
+  "salario": 0
+}
